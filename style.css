@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sectionPadding: 56px;
+  --inputPadding: 16px;
+  --primary: rgb(36, 42, 233);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  max-width: 480px;
+  margin: 120px auto;
+  padding-top: var(--sectionPadding);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+section > div {
+  width: 100%;
+  padding-left: var(--sectionPadding);
+  padding-right: var(--sectionPadding);
+  padding-bottom: 32px;
+}
+
+section > div:last-child {
+  padding-bottom: var(--sectionPadding);
+}
+
+input {
+  width: 100%;
+  padding: var(--inputPadding);
+  margin-bottom: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  outline: none;
+}
+
+input:focus {
+  outline-color: var(--primary);
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+input:last-child {
+  margin: 0;
+}
+
+button {
+  padding: 16px 24px;
+  font-size: 15px;
+  width: fit-content;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+a {
+  display: inline-block;
+  padding: 16px;
+  font-size: 15px;
+  width: fit-content;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.sectionfooter {
+  width: 100%;
+  display: flex;
+}
+
+.sectionfooter > * {
+  display: inline-block;
+}
+
+.sectionfooter > button {
+  flex-grow: 0;
+}
+
+.sectionfooter > div {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: -16px;
+}
